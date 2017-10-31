@@ -1,6 +1,7 @@
 import UIKit
 
-struct Card {
+struct Card: CustomDebugStringConvertible {
+    var debugDescription: String { return "Card: \(color) \(roll)" }
 
     var color: String = ""
     var roll: Int
@@ -98,18 +99,18 @@ class Player {
     
 }
 
-//var card1 = Card()
-//var card2 = Card()
-//var deck1 = Deck()
-//var player1 = Player()
+var card1 = Card()
+var card2 = Card()
+var deck1 = Deck()
+var player1 = Player()
 //
-//print(card1)
-//print(card2)
+print(card1)
+print(card2)
 //deck1.top()
-////print(deck1.cards)
+//print(deck1.cards)
 //print(deck1.isEmpty())
 //deck1.shuffle()
-//print(deck1.cards)
+print(deck1.cards)
 //print(deck1.cards.count)
 //player1.draw(deck: deck1)
 //player1.draw(deck: deck1)
