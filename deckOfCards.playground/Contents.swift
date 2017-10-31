@@ -86,18 +86,36 @@ class Player {
         return Int(arc4random_uniform(UInt32(6))+1)
     }
     
-//    func matchingCards(
+    func matchingCards(color: String, roll: Int)-> Int{
+        var count: Int = 0
+        for i in stride(from: self.hand.count-1, to: 0, by: -1){
+            if(self.hand[i].color == color && self.hand[i].roll == roll){
+                count += 1
+            }
+        }
+        return count
+    }
+    
 }
 
-var card1 = Card()
-var card2 = Card()
-var deck1 = Deck()
-
-print(card1)
-print(card2)
-deck1.top()
+//var card1 = Card()
+//var card2 = Card()
+//var deck1 = Deck()
+//var player1 = Player()
+//
+//print(card1)
+//print(card2)
+//deck1.top()
+////print(deck1.cards)
+//print(deck1.isEmpty())
+//deck1.shuffle()
 //print(deck1.cards)
-print(deck1.isEmpty())
-deck1.shuffle()
-print(deck1.cards)
-print(deck1.cards.count)
+//print(deck1.cards.count)
+//player1.draw(deck: deck1)
+//player1.draw(deck: deck1)
+//player1.draw(deck: deck1)
+//player1.draw(deck: deck1)
+//player1.draw(deck: deck1)
+//print(player1.hand)
+//print(player1.matchingCards(color: "Red", roll: 4))
+
